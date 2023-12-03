@@ -1,4 +1,15 @@
 import { createApp } from 'vue'
-import App from './App.vue'
+import './assets/tailwind.css'
+const app =createApp(Landing);
 
-createApp(App).mount('#app')
+import {createPinia} from 'pinia'
+// import {authStore} from '@/Stores'
+
+import Landing from './Landing.vue'
+import router from './Routers/index'
+
+// const pinia =createPinia();
+
+//  app.use(pinia);
+ app.use(router);
+ app.mount('#app')
